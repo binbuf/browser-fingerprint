@@ -47,6 +47,23 @@ You can preview the production build locally with:
 pnpm preview
 ```
 
+## Deployment
+
+The app is hosted on GitHub Pages at:
+**https://binbuf.github.io/browser-fingerprint/**
+
+### Automatic deployment
+
+Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/deploy.yml`), which builds the app and publishes the `dist/` folder to the `gh-pages` branch automatically.
+
+### Manual deployment
+
+```bash
+pnpm deploy
+```
+
+This builds the project and force-pushes `dist/` to the `gh-pages` branch.
+
 ## Other Commands
 
 - **Run unit tests:** `pnpm test`
