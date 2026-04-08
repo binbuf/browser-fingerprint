@@ -1,0 +1,123 @@
+/* src/styles/themes.css */
+
+:root {
+  /* Light Mode (Default) */
+  --color-primary: #1a56db;
+  --color-primary-hover: #1e40af;
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --color-surface: #ffffff;
+  --color-background: #f8fafc;
+  --color-border: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #576375; /* Improved from #64748b to meet 4.5:1 on white */
+
+  /* Specific roles */
+  --color-info-bg: #eff6ff;
+  --color-info-text: #1e40af;
+  --color-info-border: #bfdbfe;
+
+  --color-success-bg: #f0fdf4;
+  --color-success-text: #166534;
+  --color-success-border: #bbf7d0;
+
+  --color-warning-bg: #fffbeb;
+  --color-warning-text: #92400e;
+  --color-warning-border: #fef3c7;
+
+  --color-danger-bg: #fef2f2;
+  --color-danger-text: #991b1b;
+  --color-danger-border: #fee2e2;
+
+  /* Purple (Informational) */
+  --color-purple-bg: #f5f3ff;
+  --color-purple-text: #5b21b6;
+  --color-purple-border: #ddd6fe;
+
+  --color-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --color-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --color-primary: #3b82f6;
+  --color-primary-hover: #60a5fa;
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --color-surface: #1e293b;
+  --color-background: #0f172a;
+  --color-border: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #9ba9be; /* Improved from #94a3b8 to meet 4.5:1 on dark surface (#1e293b) */
+
+  /* Specific roles (Dark Mode) */
+  --color-info-bg: rgb(30 64 175 / 0.1);
+  --color-info-text: #60a5fa;
+  --color-info-border: rgb(30 64 175 / 0.2);
+
+  --color-success-bg: rgb(22 101 52 / 0.1);
+  --color-success-text: #34d399;
+  --color-success-border: rgb(22 101 52 / 0.2);
+
+  --color-warning-bg: rgb(146 64 14 / 0.1);
+  --color-warning-text: #fbbf24;
+  --color-warning-border: rgb(146 64 14 / 0.2);
+
+  --color-danger-bg: rgb(153 27 27 / 0.1);
+  --color-danger-text: #f87171;
+  --color-danger-border: rgb(153 27 27 / 0.2);
+
+  /* Purple (Informational) */
+  --color-purple-bg: rgb(139 92 246 / 0.1);
+  --color-purple-text: #a78bfa;
+  --color-purple-border: rgb(139 92 246 / 0.2);
+
+  --color-shadow: none;
+  --color-shadow-md: none;
+}
+
+/* System preference support - when no data-theme override is present */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    --color-primary: #3b82f6;
+    --color-primary-hover: #60a5fa;
+    --color-success: #34d399;
+    --color-warning: #fbbf24;
+    --color-danger: #f87171;
+    --color-surface: #1e293b;
+    --color-background: #0f172a;
+    --color-border: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #9ba9be; /* Improved from #94a3b8 to meet 4.5:1 on dark surface (#1e293b) */
+
+    /* Specific roles (Dark Mode) */
+    --color-info-bg: rgb(30 64 175 / 0.1);
+    --color-info-text: #60a5fa;
+    --color-info-border: rgb(30 64 175 / 0.2);
+
+    --color-success-bg: rgb(22 101 52 / 0.1);
+    --color-success-text: #34d399;
+    --color-success-border: rgb(22 101 52 / 0.2);
+
+    --color-warning-bg: rgb(146 64 14 / 0.1);
+    --color-warning-text: #fbbf24;
+    --color-warning-border: rgb(146 64 14 / 0.2);
+
+    --color-danger-bg: rgb(153 27 27 / 0.1);
+    --color-danger-text: #f87171;
+    --color-danger-border: rgb(153 27 27 / 0.2);
+
+    /* Purple (Informational) */
+    --color-purple-bg: rgb(139 92 246 / 0.1);
+    --color-purple-text: #a78bfa;
+    --color-purple-border: rgb(139 92 246 / 0.2);
+
+    --color-shadow: none;
+    --color-shadow-md: none;
+  }
+}
